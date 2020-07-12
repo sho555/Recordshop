@@ -79,38 +79,42 @@ h5 {
 
 
 
-.navbar {
+#navbar {
     visibility: none;
-    
 
     @media (max-width: 768px) {
         width: 100%;
         background-color: rgb(28, 28, 30);
         position: relative;
+        margin-bottom: 30px;
+        // display: block;
     }
 
-    .hamburger{
+    .hamburger {
         display: none;
-    
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             background: none;
             border: none;
             display: inline-block;
-    
-            margin-top: 27px;
+
+            // float: right;
+            // clear: both;
+
+            margin-top: 30px;
             margin-left: 20px;
-    
-            .icon-bar{
-              background-color: #ffe23f;
-              display: block;
-              height: 3px;
-              margin: 0 auto 8px;
-              width: 35px;
+
+            .icon-bar {
+                background-color: #ffe23f;
+                display: block;
+                height: 3px;
+                margin: 0 auto 8px;
+                width: 35px;
             }
         }
-       
-      }
-    
+
+    }
+
 
     .logo {
 
@@ -122,7 +126,7 @@ h5 {
             @media (max-width: 768px) {
                 display: block;
                 position: absolute;
-                top: 0%;
+                top: 7%;
                 left: 50%;
                 transform: translateX(-50%);
 
@@ -138,7 +142,10 @@ h5 {
 
     }
 
-    .shopping, .member, .search {
+    .shopping,
+    .member,
+    .search {
+
         display: none;
 
         @media (max-width: 768px) {
@@ -151,10 +158,16 @@ h5 {
             img {
                 width: 30px;
                 height: 30px;
-                
+
             }
-         
+
         }
+
+        @media (max-width: 375px) {
+            display: none;
+        }
+
+
 
 
     }
@@ -162,17 +175,78 @@ h5 {
     .search {
 
         @media (max-width: 768px) {
-        
+
             img {
                 width: 20px;
                 height: 20px;
                 margin-top: 13px;
-                
+
             }
-         
+
+        }
+
+
+
+
+    }
+
+
+}
+
+#menu {
+    display: none;
+
+
+    @media (max-width: 768px){
+        font-size: 30px;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        z-index: 99;
+        background-color: grey;
+
+        margin-top: 0;
+        padding: 0;
+
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    @media (max-width: 375px) {
+        width: 100%;
+
+    }
+
+    li {
+        @media (max-width: 768px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+
+            &:hover {
+                background-color: black;
+                transition: 0.5s;
+
+            }
         }
 
     }
+
+    a {
+
+        @media (max-width: 768px) {
+            display: unset;
+            color: #ffe23f;
+            text-decoration: none;
+
+            line-height: 100px;
+
+        }
+    }
+
+
+
+
 
 
 }
@@ -239,7 +313,7 @@ h5 {
 
         .swiper-container {
             width: 100%;
-            height: 80vh;
+            height: 50vh;
 
             position: relative;
 
@@ -315,7 +389,7 @@ h5 {
 
     @media (max-width: 768px) {
         display: none;
-  
+
 
     }
 
@@ -478,7 +552,7 @@ h5 {
     }
 
     .block {
-        height: 80vh;
+        height: 50vh;
         background-color: #333333;
         margin-top: 10%;
         position: relative;
@@ -560,7 +634,7 @@ h5 {
                     text-align: center;
                     line-height: 40px;
 
-                    top: 40%;
+                    top: 20%;
                     left: 0;
                     transform: translate(0, -25%);
 
@@ -568,7 +642,7 @@ h5 {
                     @media (max-width: 768px) {
 
                         width: 70%;
-                        top:20%;
+                        top: 20%;
                         left: auto;
 
                     }
@@ -638,7 +712,7 @@ h5 {
                     text-align: center;
                     line-height: 30px;
 
-                    top: 40%;
+                    top: 30%;
                     left: 0;
                     transform: translate(0, -25%)
                 }
@@ -802,7 +876,7 @@ h5 {
                     text-align: center;
                     line-height: 30px;
 
-                    top: 40%;
+                    top: 20%;
                     left: 0;
                     transform: translate(0, -25%)
                 }
@@ -819,7 +893,7 @@ h5 {
 
 
         .swiper-container {
-            height: 80vh;
+            height: 50vh;
 
             h1 {
                 margin-left: 13%;

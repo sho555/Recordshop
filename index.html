@@ -8,17 +8,22 @@
     <title>RS</title>
 
     <link rel="stylesheet" href="rs.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
 
 </head>
 
 <body>
-    <section class="navbar">
-        <button class="hamburger">
+    <section id="navbar">
+
+        <button onclick="toggleMenu()" id="hamburger" class="hamburger">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
+
         <a href="#" class="logo"><img src="pic/logo.svg" alt="indimusic"></a>
         <a href="#" id="search" class="search"><img src="pic/search_yellow.svg" alt=""> </a>
         <a href="#" id="member" class="member"><img src="pic/member.svg" alt=""> </a>
@@ -26,16 +31,22 @@
     </section>
 
     <section>
-        <ul class="menu">
-            <li> <a href="">CD/黑膠</a></li>
-            <li> <a href=""></a>交通</li>
-            <li> <a href=""></a>聯絡資訊</li>
-            <li> <a href=""></a>我要賣唱片</li>
+        <!-- <div id="menu">
+
+        </div> -->
+
+        <ul id="menu" class="menu" style="list-style-type: none">
+            <li> <a href="#cd">CD/黑膠</a></li>
+            <li> <a href="#traffic_contact">交通</a></li>
+            <li> <a href="#">聯絡資訊</a></li>
+            <li> <a href="#">我要賣唱片</a></li>
         </ul>
+
     </section>
 
 
     <section class="home">
+
         <div class="bg">
             <div class="row">
                 <a href="#cd" class="cd">CD/黑膠</a>
@@ -512,18 +523,38 @@
 
 
 
-    <!-- search -->
+    <!-- navbar -->
 
     <script>
+        function toggleMenu() {
+            var ham = document.getElementById("hamburger");
 
+            var menu = document.getElementById("menu");
 
+            //      document.getElementById('menu').innerHTML = `<ul style="list-style-type: none">
+            //     <li> <a href="#cd">CD/黑膠</a></li>
+            //     <li> <a href="#traffic_contact">交通</a></li>
+            //     <li> <a href="#">聯絡資訊</a></li>
+            //     <li> <a href="#">我要賣唱片</a></li>
+            // </ul> `;
+
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            }else {
+                menu.style.display = "none";
+            }
+
+        }
     </script>
 
     <!-- CDN -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -558,7 +589,6 @@
 
         });
     </script>
-
 
 
 
