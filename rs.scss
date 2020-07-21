@@ -552,14 +552,14 @@ h5 {
     }
 
     .block {
-        height: 50vh;
+        height: 100%;
         background-color: #333333;
         margin-top: 10%;
         position: relative;
 
 
         @media (max-width: 375px) {
-            height: 40vh;
+            height: 50vh;
         }
 
 
@@ -893,7 +893,8 @@ h5 {
 
 
         .swiper-container {
-            height: 50vh;
+            // height: 50vh;
+            height: 100%;
 
             h1 {
                 margin-left: 13%;
@@ -1008,7 +1009,7 @@ h5 {
         height: 35px;
 
         @media (max-width: 375px) {
-            font-size: 12px;
+            font-size: 10px;
         }
 
 
@@ -1021,11 +1022,18 @@ h5 {
             top: -30%;
 
             @media (max-width: 768px) {
-                margin-left: 10%;
-            }
+                position: unset;
+                margin: 20px auto;
+                display: block;
+                float: none;
+                        }
 
             @media (max-width: 375px) {
-                display: none;
+                position: unset;
+                margin: 20px auto;
+                display: block;
+                float: none;
+                // display: none;
             }
 
         }

@@ -476,7 +476,7 @@ h5 {
 }
 
 #cd .block {
-  height: 50vh;
+  height: 100%;
   background-color: #333333;
   margin-top: 10%;
   position: relative;
@@ -484,7 +484,7 @@ h5 {
 
 @media (max-width: 375px) {
   #cd .block {
-    height: 40vh;
+    height: 50vh;
   }
 }
 
@@ -813,7 +813,7 @@ h5 {
 }
 
 #cd .block .swiper-container {
-  height: 50vh;
+  height: 100%;
 }
 
 #cd .block .swiper-container h1 {
@@ -917,7 +917,7 @@ h5 {
 
 @media (max-width: 375px) {
   .footer .copyright {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -930,13 +930,19 @@ h5 {
 
 @media (max-width: 768px) {
   .footer .copyright img {
-    margin-left: 10%;
+    position: unset;
+    margin: 20px auto;
+    display: block;
+    float: none;
   }
 }
 
 @media (max-width: 375px) {
   .footer .copyright img {
-    display: none;
+    position: unset;
+    margin: 20px auto;
+    display: block;
+    float: none;
   }
 }
 /*# sourceMappingURL=rs.css.map */
