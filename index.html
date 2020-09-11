@@ -10,39 +10,37 @@
     <link rel="stylesheet" href="rs.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+    <!--Include Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 
 </head>
 
 <body>
-    <section id="navbar">
-
-        <button onclick="toggleMenu()" id="hamburger" class="hamburger">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-
+    <header id="navbar">
+        <div id="hamburger" onclick="onClickMenu()">
+            <div class="icon"></div>
+        </div>
         <a href="#" class="logo"><img src="pic/logo.svg" alt="indimusic"></a>
         <a href="#" id="search" class="search"><img src="pic/search_yellow.svg" alt=""> </a>
         <a href="#" id="member" class="member"><img src="pic/member.svg" alt=""> </a>
         <a href="#" class="shopping"><img src="pic/shopping.svg" alt=""></a>
-    </section>
-
-    <section>
-        <!-- <div id="menu">
-
-        </div> -->
 
         <ul id="menu" class="menu" style="list-style-type: none">
-            <li> <a href="#cd">CD/黑膠</a></li>
-            <li> <a href="#traffic_contact">交通</a></li>
-            <li> <a href="#">聯絡資訊</a></li>
-            <li> <a href="#">我要賣唱片</a></li>
-        </ul>
+                <li> <a href="#cd">CD/黑膠</a></li>
+                <li> <a href="#traffic_contact">交通</a></li>
+                <li> <a href="#contact">聯絡資訊</a></li>
+                <li> <a href="#">我要賣唱片</a></li>
+            </ul>
+            <div class="menu_bg" id="menu_bg"></div>
+    </header>
 
-    </section>
+    <!-- <ul id="menu" class="menu" style="list-style-type: none">
+        <li> <a href="#cd">CD/黑膠</a></li>
+        <li> <a href="#traffic_contact">交通</a></li>
+        <li> <a href="#">聯絡資訊</a></li>
+        <li> <a href="#">我要賣唱片</a></li>
+    </ul> -->
 
 
     <section class="home">
@@ -107,10 +105,7 @@
                     </p>
                     <h2> 『CD 不死！！ 黑膠不死！！』
                     </h2>
-
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -488,7 +483,7 @@
                     tabindex="0" class="map"></iframe>
 
                 <!-- <img src="pic/map.png" alt=""> -->
-                <div class="content2">
+                <div class="content2" id="contact">
                     <h1>聯絡資訊</h1>
                     <p>電話：02-23696386</p>
                     <p>Email：indimusic.me@gmail.com</p>
@@ -520,38 +515,43 @@
 
     </footer>
 
-
-
     <!-- navbar -->
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
+        // var burger = document.querySelector('.hamburger');
+        // var menu = document.querySelector('.menu');
 
-            if (menu.style.display === "none") {
-                menu.style.display = "block";
-            } else {
-                menu.style.display = "none";
-            }
+        // burger.addEventListener('click', () => {
+        //     menu.classList.toggle('menu');
+        // });
+        function onClickMenu() {
+            document.getElementById('hamburger').classList.toggle('change');
+            document.querySelector('.menu').classList.toggle('change');
+
+            document.getElementById('menu_bg').classList.toggle('change_bg');
+
         }
     </script>
+
 
     <!-- 隱藏header -->
     <script>
         var prevScrollPos = window.pageYOffset;
-        var menu = document.getElementById("menu");
         //判斷為向上捲動
-        window.onscroll = function() {
+        window.onscroll = function () {
 
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollPos < currentScrollPos) {
+            if (prevScrollPos > currentScrollPos) {
                 document.getElementById("row").style.top = "0";
-                menu.style.backgroundColor = "rgb(28, 28, 30)";
+                document.getElementById("navbar").style.display = "block";
+                
 
             } else {
                 document.getElementById("row").style.top = "-100px";
+                document.getElementById("navbar").style.display = "none";
             }
             prevScrollPos = currentScrollPos;
+
         }
     </script>
 

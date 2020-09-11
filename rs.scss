@@ -80,18 +80,25 @@ h5 {
 
 
 #navbar {
-    visibility: none;
+    display: none;
+    transition:  top 0.3s;
+
 
     @media (max-width: 768px) {
         width: 100%;
         background-color: rgb(28, 28, 30);
-        position: relative;
+        
         margin-bottom: 30px;
-        // display: block;
+        display: block;
+
+        // top: 20%;
+
+        
     }
 
-    .hamburger {
+    #hamburger {
         display: none;
+
 
         @media (max-width: 768px) {
             background: none;
@@ -101,19 +108,67 @@ h5 {
             // float: right;
             // clear: both;
 
-            margin-top: 30px;
+            margin-top: 35px;
             margin-left: 20px;
+            transition: width .2s linear;
+            position: relative;
+            z-index: 99;
 
-            .icon-bar {
-                background-color: #ffe23f;
+
+            .icon {
+                background-color: rgb(255, 226, 63);
                 display: block;
                 height: 3px;
                 margin: 0 auto 8px;
-                width: 35px;
+                width: 30px;
+
+                &::before {
+                    content: '';
+                    width: 30px;
+                    height: 3px;
+                    position: absolute;
+                    background-color: rgb(255, 226, 63);
+                    transition: all .2s linear;
+                    transform: translateY(-10px);
+
+                }
+
+                &::after {
+                    content: '';
+                    width: 30px;
+                    height: 3px;
+                    position: absolute;
+                    background-color: rgb(255, 226, 63);
+                    transition: all .2s linear;
+                    transform: translateY(10px);
+
+                }
+
+
+                 .icon.change {
+
+
+                    &::before {
+                        transform: rotate(45deg);
+
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg);
+
+                    }
+
+
+
+
+                }
+
+
             }
         }
 
     }
+
 
 
     .logo {
@@ -126,7 +181,7 @@ h5 {
             @media (max-width: 768px) {
                 display: block;
                 position: absolute;
-                top: 7%;
+                top: 0%;
                 left: 50%;
                 transform: translateX(-50%);
 
@@ -182,30 +237,22 @@ h5 {
 
         }
 
-
-
-
     }
 
 
 }
 
-#menu {
+.menu {
+    transition: width .2s;
     display: none;
 
-
-    @media (max-width: 768px){
-        font-size: 30px;
-        width: 50%;
-        height: 100vh;
-        position: fixed;
-        z-index: 99;
-        background-color: grey;
-
-        margin-top: 0;
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 0;
+        z-index: 9;
+        margin: 0;
         padding: 0;
-
-        transition: all 0.5s ease-in-out;
 
     }
 
@@ -214,35 +261,82 @@ h5 {
 
     }
 
+    ul{
+        transition: left 0.3s ease;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-left: 40%;
+        }
+
+    }
+
+
     li {
         @media (max-width: 768px) {
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 40px;
+
+            // padding-left: 40px;
+            width: 100%;
+            margin-left: 50%;
+
+            &:nth-child(1) {
+
+                margin-top: 100px;
+            }
 
             &:hover {
-                background-color: black;
+                background-color: transparent;
+                opacity: 70%;
                 transition: 0.5s;
 
+            }
+            @media (max-width: 375px){
+                margin-left: -5%;
+   }
+        }
+
+        a {
+
+            @media (max-width: 768px) {
+                color: #ffe23f;
+                text-decoration: none;
+                line-height: 100px;
+
+            }
+            @media (max-width: 375px) {
+                margin-left: 12%;
+        
             }
         }
 
     }
 
-    a {
+    
+}
 
-        @media (max-width: 768px) {
-            display: unset;
-            color: #ffe23f;
-            text-decoration: none;
-
-            line-height: 100px;
-
-        }
-    }
-
+.change {
+    display: block;
 
 }
+
+
+.menu_bg{
+    @media (max-width: 768px) {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: rgb(28, 28, 30);
+    }
+}
+
+.change_bg{
+	width: 50%;
+	height: 100vh;
+}
+
 
 
 .home {
@@ -385,12 +479,9 @@ h5 {
     @media (max-width: 768px) {
         display: none;
 
-
     }
 
 }
-
-
 
 .sell {
     background-color: #ffe23f;
@@ -465,6 +556,7 @@ h5 {
 
                 padding-left: 5%;
                 padding-right: 30%;
+                font-size: 1rem;
             }
 
             @media (max-width: 375px) {
@@ -486,6 +578,7 @@ h5 {
                 margin: 0;
                 padding-left: 2%;
                 padding-top: 20px;
+                font-size: 2rem;
 
             }
 
@@ -537,24 +630,25 @@ h5 {
     @media (max-width: 768px) {
 
         position: relative;
+        height: 50%;
         margin-top: 10vh;
 
     }
 
 
     @media (max-width: 375px) {
-        height: 50vh;
+        height: 70%;
     }
 
     .block {
         height: 100%;
         background-color: #333333;
-        margin-top: 10%;
+        // margin-top: 10%;
         position: relative;
 
 
         @media (max-width: 375px) {
-            height: 50vh;
+            height: 50%;
         }
 
 
@@ -1021,7 +1115,7 @@ h5 {
                 margin: 20px auto;
                 display: block;
                 float: none;
-                        }
+            }
 
             @media (max-width: 375px) {
                 position: unset;
