@@ -655,13 +655,15 @@ h5 {
             position: relative;
 
             .cd_img_1 {
-                width: 500px;
-                height: 500px;
-                margin-left: 18%;
+                width: 620px;
+                height: 620px;
+                margin-left: 17%;
                 position: absolute;
 
                 @media(max-width:1440px){
-                    margin-left: 13%;
+                width: 500px;
+                height: 500px;
+                margin-left: 13%;
 
                 }
 
@@ -766,9 +768,9 @@ h5 {
             }
 
             .cd_img_2 {
-                width: 240px;
-                height: 240px;
-                margin-left: 45%;
+                width: 300px;
+                height: 300px;
+                margin-left: 53%;
                 position: absolute;
                 transform: translate(0%, 0%);
 
@@ -820,9 +822,9 @@ h5 {
             }
 
             .cd_img_3 {
-                width: 240px;
-                height: 240px;
-                margin-left: 45%;
+                width: 300px;
+                height: 300px;
+                margin-left: 53%;
                 position: absolute;
                 transform: translate(105%, 0%);
 
@@ -874,9 +876,9 @@ h5 {
             }
 
             .cd_img_4 {
-                width: 240px;
-                height: 240px;
-                margin-left: 45%;
+                width: 300px;
+                height: 300px;
+                margin-left: 53%;
                 position: absolute;
                 transform: translate(105%, 108%);
 
@@ -929,9 +931,9 @@ h5 {
             }
 
             .cd_img_5 {
-                width: 240px;
-                height: 240px;
-                margin-left: 45%;
+                width: 300px;
+                height: 300px;
+                margin-left: 53%;
                 position: absolute;
                 transform: translate(0%, 108%);
 
