@@ -660,6 +660,11 @@ h5 {
                 margin-left: 18%;
                 position: absolute;
 
+                @media(max-width:1440px){
+                    margin-left: 13%;
+
+                }
+
                 @media (max-width: 768px) {
                     position: unset;
                     display: block;

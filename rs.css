@@ -582,6 +582,12 @@ h5 {
   position: absolute;
 }
 
+@media (max-width: 1440px) {
+  #cd .block .imgs .cd_img_1 {
+    margin-left: 13%;
+  }
+}
+
 @media (max-width: 768px) {
   #cd .block .imgs .cd_img_1 {
     position: unset;
